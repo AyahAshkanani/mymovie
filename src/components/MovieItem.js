@@ -2,10 +2,10 @@
 import { MovieWrapper } from "../Styles";
 import { observer } from "mobx-react";
 
-const MovieItem = () => {
+const MovieItem = (props) => {
     return (
         <MovieWrapper>
-            <p>hello</p>
+            <p>{props.data}</p>
         </MovieWrapper>
     )
 
