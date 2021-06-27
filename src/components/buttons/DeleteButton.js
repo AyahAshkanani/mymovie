@@ -1,5 +1,5 @@
 import movieStore from "../../stores/movieStore";
-import { DeleteButtonStyled } from "../../styles";
+import { DeleteButtonStyled } from "../../Styles";
 
 const DeleteButton = (props) => {
     const handleDelete = () => {
