@@ -2,14 +2,18 @@ import data from "../data";
 import { makeAutoObservable } from "mobx";
 
 class MovieStore {
-    data = data;
+  data = data;
 
-    constructor() {
-        //when data is updated the components will be rerendered 
-        makeAutoObservable(this);
-    };
+  constructor() {
+    //when data is updated the components will be rerendered
+    makeAutoObservable(this);
+  }
 
+  updateMovie = (updateMovie) => {
+    const movie = this.movie.find((movie) => movie.name === updateMovie);
+    movie.name = updateMovie.name;
+  };
+}
 
-};
-
-export default MovieStore;
+const movieStore = new MovieStore();
+export default movieStore;

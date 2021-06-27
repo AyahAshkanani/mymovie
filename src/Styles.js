@@ -9,16 +9,14 @@ export const MovieWrapper = styled.div`
   }
 `;
 
-export const SearchBarStyled = styled.input`
-margin: 1rem auto;
-padding:0.5rem;
-display:block;
-width: 40%;
+export const Title = styled.h1`
+  text-align: center;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 75px;
+  margin-top: -25px;
+  padding-top: 4%;
 `;
-
-
-export const ListWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
+export const DeleteButtonStyled = styled.p`
+color:red;
 `;

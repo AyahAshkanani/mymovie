@@ -1,19 +1,14 @@
 import MovieItem from "./MovieItem";
-import { useState } from "react";
-import { ListWrapper } from "../styles";
+import data from "../data";
+import { Title } from "../Styles";
 
 const MovieList = () => {
-    const [query, setQuery] = useState("");
-
-    const movieList = data.map((data) => (
-        <MovieItem data={data} key={data.name} />
-    ))
-    return (
-
-        <SearchBar setQuery={setQuery} />
-        <ListWrapper>{movieList}</ListWrapper>
-    );
-
-
+  const movieList = data.map((data) => <MovieItem data={data} />);
+  return (
+    <div>
+      <Title>Movies List</Title>
+      {movieList}
+    </div>
+  );
 };
 export default MovieList;
