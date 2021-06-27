@@ -1,8 +1,14 @@
 import "./App.css";
-import WatchStore from "./stores/watchStore";
+import MovieItem from "./components/MovieItem";
 
 function App() {
-  return <WatchStore />;
-}
+  return (
+    <div>
+      <MovieItem />
+    </div>
+  );
+
+
+};
 
 export default App;

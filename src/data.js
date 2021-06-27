@@ -15,5 +15,4 @@ const data = [
     name: "Security",
   },
 ];
-
 export default data;
