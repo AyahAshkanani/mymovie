@@ -14,8 +14,17 @@ class MovieStore {
 };
 
   updateMovie = (updateMovie) => {
-    const movie = this.movie.find((movie) => movie.name === updateMovie);
-    movie.name = updateMovie.name;
+    const movie = this.movie.find((movie) => movie.id === updateMovie.id);
+    movie.watch = !movie.watch;
+  };
+
+  addMovie = (newMovie) => {
+    this.data.push({
+      name: newMovie,
+      id: this.data.length + 1,
+      watched: false,
+    });
+    console.log(this.data);
   };
 }
 

@@ -3,10 +3,10 @@ import { DeleteButtonStyled } from "../../Styles";
 
 const DeleteButton = (props) => {
     const handleDelete = () => {
-        movieStore.handleDelete(props.movieId);
+        movieStore.handleDelete(props.dataId);
     };
     return (
-        <DeleteButtonStyled onClick={handleDelete}>Delete</DeleteButtonStyled>
+        <DeleteButtonStyled onClick={handleDelete}>Move</DeleteButtonStyled>
     );
 };
 

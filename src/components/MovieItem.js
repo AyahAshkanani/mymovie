@@ -8,6 +8,7 @@ const MovieItem = (props) => {
     <MovieWrapper>
       <p>{props.data.name}</p>
       <DeleteButton dataId={props.data.id} />
+      {/* <StatusButton data = {props.data}/> */}
     </MovieWrapper>
   );
 };

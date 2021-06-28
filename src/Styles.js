@@ -1,4 +1,13 @@
 import styled, { createGlobalStyle } from "styled-components";
+// import { Link, NavLink } from "react-router-dom";
+
+
+export const GlobalStyle = createGlobalStyle`
+    body {
+        background-color: ${(props) => props.theme.backgroundColor};
+        color: ${(props) => props.theme.mainColor};
+    }
+`;
 
 export const MovieWrapper = styled.div`
   margin: 20px;
@@ -17,6 +26,17 @@ export const Title = styled.h1`
   margin-top: -25px;
   padding-top: 4%;
 `;
+
+export const Detail = styled.h3`
+  text-align: center;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 25px;
+  margin-top: -25px;
+  padding-bottom:20px;
+  padding-top: 5px;
+`;
+
 export const List = styled.h4`
   text-align: left;
   font-weight: bold;
@@ -26,6 +46,18 @@ export const List = styled.h4`
   padding-top: 4%;
   color:blue;
 `;
+
+export const SearchBarStyled = styled.input`
+  background-color: ${(props) => props.theme.backgroundColor};
+  color: ${(props) => props.theme.mainColor};
+  padding: 0.5rem;
+  ${"" /* margin: 1rem auto; */}
+  display: block;
+  width: 100%;
+  ${"" /* border: 1px solid #b0b0b0; */}
+  ${"" /* border-radius: 4px; */}
+`;
+
 export const DeleteButtonStyled = styled.p`
-color:red;
+color:${(props) => props.theme.red};
 `;
