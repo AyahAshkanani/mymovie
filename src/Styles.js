@@ -40,7 +40,7 @@ export const List = styled.h4`
   text-align: left;
   font-weight: bold;
   font-style: italic;
-  font-size: 35px;
+  font-size: 40px;
   margin-top: -25px;
   padding-top: 4%;
   color: blue;
@@ -60,18 +60,21 @@ export const SearchBarStyled = styled.input`
 export const DeleteButtonStyled = styled.button`
   color: white;
   background-color: black;
-  width: 70px;
+  width: 90px;
+  
+  margin-bottom:20px;
   border-radius: 5px;
   &:hover {
     color: black;
     background-color: white;
   }
+
 `;
 
 export const UpdateButtonStyled = styled.button`
   color: black;
   background-color: white;
-  width: 70px;
+  width: 90px;
   border-radius: 5px;
   &:hover {
     color: white;

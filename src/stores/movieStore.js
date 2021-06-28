@@ -1,6 +1,7 @@
 import data from "../data";
 import { makeAutoObservable } from "mobx";
 
+
 class MovieStore {
   data = data;
 
@@ -8,15 +9,16 @@ class MovieStore {
     //when data is updated the components will be rerendered
     makeAutoObservable(this);
   }
-  deleteMovie = (dataId) => {
-    const updateMovie = this.data.filter((data) => data.id !== dataId);
-    this.data = updateMovie;
-    console.log(this.deleteMovie);
+  deleteMovie = (dataoneId) => {
+    const updateMovies = this.data.filter((dataone) => dataone.id !== dataoneId);
+    this.data = updateMovies;
+   
   };
-
-  updateMovie = (updateMovie) => {
-    const movie = this.movie.find((movie) => movie.id === updateMovie.id);
-    movie.watch = updateMovie.watch;
+//watch and whatched button
+  updateMovie = (movieUpdate) => {
+    
+    const movie = this.data.find((movie)=> movie.id === movieUpdate.id);
+    movie.watched = !movie.watched;
   };
 
   addMovie = (newMovie) => {
@@ -25,8 +27,9 @@ class MovieStore {
       id: this.data.length + 1,
       watched: false,
     });
-    console.log(this.data);
+
   };
+
 }
 
 const movieStore = new MovieStore();

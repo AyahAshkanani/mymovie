@@ -3,7 +3,7 @@ import { UpdateButtonStyled } from "../../Styles";
 
 const UpdateButton = (props) => {
   const handleUpdate = () => {
-    movieStore.updateMovie(props.updateMovie);
+    movieStore.updateMovie(props.data);
   };
   return (
     <div>

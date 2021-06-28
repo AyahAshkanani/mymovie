@@ -7517,14 +7517,14 @@ mobx-react-lite@^3.2.0:
 
 mobx-react@^7.2.0:
   version "7.2.0"
-  resolved "https://registry.npmjs.org/mobx-react/-/mobx-react-7.2.0.tgz"
+  resolved "https://registry.yarnpkg.com/mobx-react/-/mobx-react-7.2.0.tgz#241e925e963bb83a31d269f65f9f379e37ecbaeb"
   integrity sha512-KHUjZ3HBmZlNnPd1M82jcdVsQRDlfym38zJhZEs33VxyVQTvL77hODCArq6+C1P1k/6erEeo2R7rpE7ZeOL7dg==
   dependencies:
     mobx-react-lite "^3.2.0"
 
 mobx@^6.3.2:
   version "6.3.2"
-  resolved "https://registry.npmjs.org/mobx/-/mobx-6.3.2.tgz"
+  resolved "https://registry.yarnpkg.com/mobx/-/mobx-6.3.2.tgz#125590961f702a572c139ab69392bea416d2e51b"
   integrity sha512-xGPM9dIE1qkK9Nrhevp0gzpsmELKU4MFUJRORW/jqxVFIHHWIoQrjDjL8vkwoJYY3C2CeVJqgvl38hgKTalTWg==
 
 move-concurrently@^1.0.1:

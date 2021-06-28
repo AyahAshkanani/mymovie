@@ -1,30 +1,34 @@
 import MovieItem from "./MovieItem";
-import data from "../data";
 import movieStore from "../stores/movieStore";
 import SearchBar from "./SearchBar";
+import { observer } from "mobx-react";
+import { useState } from "react";
 
-// import { Table, Badge } from "react-bootstrap";
-// import SearchBar from "./SearchBar";
-//show the movies i've watched seperatly
-//show movies i haven't watched seperatly
-//use props to pass data
-//check watched === true print watched
-//check watched === false print watch
+const MovieList = () => {
 
-const MovieList = (props) => {
+  const [query,setQuery] = useState("");
   //data.watched===props.watch to check if true or false so i only need one. props.watch will be in app
-  const Movies = movieStore.data
+ 
+    const Movies = movieStore.data
     .filter((data) => data.watched === false)
+
+    const ToWatch= Movies.filter((data)=>data.name.includes(query))
     .map((data) => {
-      return <MovieItem key={data.id} data={data} />;
+      return <MovieItem key={data.id} data={data} />
     });
 
   return (
+    //if towatch===movies just show numbers 1
+    //if towatch<movies show outof
     <div>
       <h1>To Watch</h1>
-      <SearchBar />
-      {Movies}
+      <h4>
+      
+      {ToWatch.length} out of {Movies.length}
+      </h4>
+      <SearchBar setQuery={setQuery}/>
+      {ToWatch}
     </div>
   );
 };
-export default MovieList;
+export default observer(MovieList);

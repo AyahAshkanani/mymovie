@@ -10,7 +10,6 @@ const MovieItem = (props) => {
       <p>{props.data.name}</p>
       <DeleteButton dataId={props.data.id} />
       <UpdateButton data={props.data} />
-      {/* <StatusButton data = {props.data}/> */}
     </MovieWrapper>
   );
 };
