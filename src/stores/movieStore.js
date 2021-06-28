@@ -8,14 +8,15 @@ class MovieStore {
     //when data is updated the components will be rerendered
     makeAutoObservable(this);
   }
-  handleDelete = (dataId) => {
-    const updateMovie = this.data.filter(data => data.id !== dataId);
+  deleteMovie = (dataId) => {
+    const updateMovie = this.data.filter((data) => data.id !== dataId);
     this.data = updateMovie;
-};
+    console.log(this.deleteMovie);
+  };
 
   updateMovie = (updateMovie) => {
     const movie = this.movie.find((movie) => movie.id === updateMovie.id);
-    movie.watch = !movie.watch;
+    movie.watch = updateMovie.watch;
   };
 
   addMovie = (newMovie) => {

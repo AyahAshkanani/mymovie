@@ -1,7 +1,6 @@
 import styled, { createGlobalStyle } from "styled-components";
 // import { Link, NavLink } from "react-router-dom";
 
-
 export const GlobalStyle = createGlobalStyle`
     body {
         background-color: ${(props) => props.theme.backgroundColor};
@@ -33,7 +32,7 @@ export const Detail = styled.h3`
   font-style: italic;
   font-size: 25px;
   margin-top: -25px;
-  padding-bottom:20px;
+  padding-bottom: 20px;
   padding-top: 5px;
 `;
 
@@ -44,7 +43,7 @@ export const List = styled.h4`
   font-size: 35px;
   margin-top: -25px;
   padding-top: 4%;
-  color:blue;
+  color: blue;
 `;
 
 export const SearchBarStyled = styled.input`
@@ -53,11 +52,33 @@ export const SearchBarStyled = styled.input`
   padding: 0.5rem;
   ${"" /* margin: 1rem auto; */}
   display: block;
-  width: 100%;
+  width: 50%;
   ${"" /* border: 1px solid #b0b0b0; */}
   ${"" /* border-radius: 4px; */}
 `;
 
-export const DeleteButtonStyled = styled.p`
-color:${(props) => props.theme.red};
+export const DeleteButtonStyled = styled.button`
+  color: white;
+  background-color: black;
+  width: 70px;
+  border-radius: 5px;
+  &:hover {
+    color: black;
+    background-color: white;
+  }
+`;
+
+export const UpdateButtonStyled = styled.button`
+  color: black;
+  background-color: white;
+  width: 70px;
+  border-radius: 5px;
+  &:hover {
+    color: white;
+    background-color: black;
+  }
+`;
+
+export const AddButtonStyled = styled.button`
+  color: ${(props) => props.theme.red};
 `;

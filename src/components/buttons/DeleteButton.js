@@ -2,12 +2,12 @@ import movieStore from "../../stores/movieStore";
 import { DeleteButtonStyled } from "../../Styles";
 
 const DeleteButton = (props) => {
-    const handleDelete = () => {
-        movieStore.handleDelete(props.dataId);
-    };
-    return (
-        <DeleteButtonStyled onClick={handleDelete}>Move</DeleteButtonStyled>
-    );
+  const handleDelete = () => {
+    movieStore.deleteMovie(props.dataId);
+  };
+  return (
+    <DeleteButtonStyled onClick={handleDelete}> Delete </DeleteButtonStyled>
+  );
 };
 
 export default DeleteButton;

@@ -1,11 +1,18 @@
-import { useState } from "react";
+import movieStore from "../../stores/movieStore";
+import { UpdateButtonStyled } from "../../Styles";
 
-const UpdateButton = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const openModal = () => setIsOpen(true);
-  const closeModal = () => setIsOpen(false);
-
-  return <div></div>;
+const UpdateButton = (props) => {
+  const handleUpdate = () => {
+    movieStore.updateMovie(props.updateMovie);
+  };
+  return (
+    <div>
+      {/* in watched list unwatch button and in watchlist watched button */}
+      <UpdateButtonStyled onClick={handleUpdate}>
+        {props.data.watched ? "Unwatch" : "Watched"}
+      </UpdateButtonStyled>
+    </div>
+  );
 };
 
 export default UpdateButton;

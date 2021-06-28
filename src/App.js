@@ -1,15 +1,12 @@
-
 import "./App.css";
 import MovieList from "./components/MovieList";
 import WatchedList from "./components/WatchedList";
 import { Header } from "./components/Header";
-import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import AddMovieButton from "./components/buttons/AddMovieButton";
+// import { Switch, Route } from "react-router-dom";
 
 // import { GlobalStyle } from "./Styles";
 // import { ThemeProvider } from "styled-components";
-
-
 
 // const theme = {
 //   light: {
@@ -25,7 +22,6 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 // };
 
 function App(props) {
-
   // const [currentTheme, setCurrentTheme] = useState("light");
   // //detail
   // const [movie, setMovie] = useState(null);
@@ -35,35 +31,23 @@ function App(props) {
   //   else setCurrentTheme("light");
   // }
 
-
   const watch = props.watch;
 
-//we make props.watch to see if true or false
+  //we make props.watch to see if true or false
   return (
-  //   <div>
-  //   <ThemeProvider theme={theme}>
-  //     <GlobalStyle />
-  //     {/* <AddMovie /> */}
-  //     <MovieList></MovieList>
-  //   </ThemeProvider>
-  // </div>
+    //   <ThemeProvider theme={theme}>
+    //     <GlobalStyle />
+    //   </ThemeProvider>
 
     <div>
-    
-      <Router>
-        <Header />
-        </Router>
-    
-    {watch ? true : false}
-   
-    {watch}
-    <WatchedList/>
+      <Header />
+      <AddMovieButton />
+      {watch ? true : false}
+      {watch}
       <MovieList />
-      
-      
+      <WatchedList />
     </div>
   );
 }
-
 
 export default App;
