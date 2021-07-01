@@ -23,8 +23,9 @@ const WatchedList = () => {
   return (
     <div>
       <h1>Watched</h1>
-      <h4>{names.length} out of {Watched.length}</h4>
-
+      <h4>
+      { Watched.length === names.length ? `${Watched.length}`:`${names.length} out of ${Watched.length}`}
+</h4>
       <SearchBar setQuery={setQuery}/>
       {names}
       

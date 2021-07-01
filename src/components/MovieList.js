@@ -23,8 +23,7 @@ const MovieList = () => {
     <div>
       <h1>To Watch</h1>
       <h4>
-      
-      {ToWatch.length} out of {Movies.length}
+     { Movies.length === ToWatch.length ? `${Movies.length}`:`${ToWatch.length} out of ${Movies.length}`}
       </h4>
       <SearchBar setQuery={setQuery}/>
       {ToWatch}
